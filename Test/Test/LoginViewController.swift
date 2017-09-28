@@ -49,6 +49,7 @@
 
 import UIKit
 import SnapKit
+import Kingfisher
 
 class LoginViewController: UIViewController {
 
@@ -72,12 +73,35 @@ class LoginViewController: UIViewController {
 
     func createViewOne() {
 //        创建uiimageview的控件
-        let image:UIImage = UIImage.init(named: "123")!
-        let imageView = UIImageView.init(image: image)
-        imageView.frame = CGRect(x:20,y:120,width:image.size.width,height:image.size.height)
-        imageView.layer.cornerRadius = image.size.width/2;
+        let imageView = UIImageView.init()
+        imageView.frame = CGRect(x:20,y:120,width:200,height:200)
+        imageView.layer.cornerRadius = 200/2;
         imageView.layer.masksToBounds = true;
         self.view.addSubview(imageView)
+//        imageView.image = UIImage.init(named: "123")!
+        
+        
+        
+        
+        
+        
+        
+//        使用Kingfisher加载网络图片
+//         imageView.kf.setImage(with: <#T##Resource?#>, placeholder: <#T##Placeholder?#>, options: <#T##KingfisherOptionsInfo?#>, progressBlock: <#T##DownloadProgressBlock?##DownloadProgressBlock?##(Int64, Int64) -> ()#>, completionHandler: <#T##CompletionHandler?##CompletionHandler?##(Image?, NSError?, CacheType, URL?) -> ()#>)
+//        在这里，Resource只是一个协议，由cacheKey和downloadURL组成的，kingfisher默认是将url作为cacheKey
+//        默认情况，kingfisher先从内存中去，再去硬盘中取，如果都没有，才会下载，但是如果不想使用缓存，就要用KingfisherOptionsInfo这个来设定了
+        //       在这里，options参数，是一个存了KingfisherOptionsInfoItem枚举值的数组，这里，要写KingfisherOptionsInfoItem的枚举值，可以写多个，这里，fade是一个动画（淡出显示的动画），forceRefresh这个是每次都从网络获取，还有很多可以自己进库文件看。     kf.setImage返回的是一个task任务（类似系统的session任务），这个任务是可以取消的（不过一般这个也没用到过）
+//        progressBlock是下载进度，completionHandler是完成回调。
+        imageView.kf.setImage(with: ImageResource.init(downloadURL: URL.init(string: "https://images4.c-ctrip.com/target/fd/headphoto/g3/M08/F4/72/CggYG1aXR_eABX1TAAAfVBzkWIY988_C_180_180.jpg")!), placeholder: nil, options: nil, progressBlock: nil, completionHandler: { (image, error, nil, imageURL) in
+            //下载完成需要进行的操作
+            print("下载完成")
+        })
+        
+        
+        
+        
+        
+        
         
         
 //        使用SnapKit进行控件的代码约束
@@ -91,6 +115,12 @@ class LoginViewController: UIViewController {
         
 
         
+        
+        
+        
+    
+        
+        
 //        使用系统自带的请求封装的方法进行网络请求处理
         CSHTTPTool.share.getWithPath(path: "http://appapi.zongs365.com/api/home/machine/9001000015/goodsdetial", paras: nil, success: { (data) in
             print("成功","\n", data)
@@ -98,6 +128,9 @@ class LoginViewController: UIViewController {
             print("失败", error)
         }
     }
+    
+    
+    
     
     /*
     // MARK: - Navigation
