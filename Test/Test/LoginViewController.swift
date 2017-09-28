@@ -177,7 +177,6 @@ class LoginViewController: UIViewController {
             
         }
     }
-        
     //下载 上传
     func downloadAnduploadMethod() {
         let  host_img_url = String()
