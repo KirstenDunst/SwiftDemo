@@ -92,7 +92,8 @@ class LoginViewController: UIViewController {
 //        默认情况，kingfisher先从内存中去，再去硬盘中取，如果都没有，才会下载，但是如果不想使用缓存，就要用KingfisherOptionsInfo这个来设定了
         //       在这里，options参数，是一个存了KingfisherOptionsInfoItem枚举值的数组，这里，要写KingfisherOptionsInfoItem的枚举值，可以写多个，这里，fade是一个动画（淡出显示的动画），forceRefresh这个是每次都从网络获取，还有很多可以自己进库文件看。     kf.setImage返回的是一个task任务（类似系统的session任务），这个任务是可以取消的（不过一般这个也没用到过）
 //        progressBlock是下载进度，completionHandler是完成回调。
-        imageView.kf.setImage(with: ImageResource.init(downloadURL: URL.init(string: "https://images4.c-ctrip.com/target/fd/headphoto/g3/M08/F4/72/CggYG1aXR_eABX1TAAAfVBzkWIY988_C_180_180.jpg")!), placeholder: nil, options: nil, progressBlock: nil, completionHandler: { (image, error, nil, imageURL) in
+//        https://images4.c-ctrip.com/target/fd/headphoto/g3/M08/F4/72/CggYG1aXR_eABX1TAAAfVBzkWIY988_C_180_180.jpg
+        imageView.kf.setImage(with: ImageResource.init(downloadURL: URL.init(string: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1506591366147&di=ae58e9937b8e0916bd29c0b6622b0b8d&imgtype=0&src=http%3A%2F%2Fwww.pp3.cn%2Fuploads%2F1304%2F188.jpg")!), placeholder: nil, options: nil, progressBlock: nil, completionHandler: { (image, error, nil, imageURL) in
             //下载完成需要进行的操作
             print("下载完成")
         })
