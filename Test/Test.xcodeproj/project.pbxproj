@@ -14,6 +14,7 @@
 		1F4E5ECB1F78E3BE00F1E08E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F4E5EC91F78E3BE00F1E08E /* LaunchScreen.storyboard */; };
 		1F4E5ED31F78E4EB00F1E08E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4E5ED21F78E4EB00F1E08E /* LoginViewController.swift */; };
 		1FAE85901F7A28AA00B09D3E /* CSHTTPTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAE858F1F7A28AA00B09D3E /* CSHTTPTool.swift */; };
+		1FB518E01F7DE2060021A3A4 /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB518DF1F7DE2060021A3A4 /* DemoViewController.swift */; };
 		6ADD54CDE3DB3C491CE6342A /* Pods_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F80E265588C3818EC30288D0 /* Pods_Test.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		1F4E5ECC1F78E3BE00F1E08E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F4E5ED21F78E4EB00F1E08E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1FAE858F1F7A28AA00B09D3E /* CSHTTPTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSHTTPTool.swift; sourceTree = "<group>"; };
+		1FB518DF1F7DE2060021A3A4 /* DemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
 		574ABE440DFD9B74B9498AC7 /* Pods-Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Test/Pods-Test.debug.xcconfig"; sourceTree = "<group>"; };
 		F80E265588C3818EC30288D0 /* Pods_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -76,6 +78,7 @@
 			children = (
 				1F4E5EC01F78E3BD00F1E08E /* AppDelegate.swift */,
 				1F4E5EC21F78E3BD00F1E08E /* ViewController.swift */,
+				1FB518DF1F7DE2060021A3A4 /* DemoViewController.swift */,
 				1F4E5ED21F78E4EB00F1E08E /* LoginViewController.swift */,
 				1FAE858F1F7A28AA00B09D3E /* CSHTTPTool.swift */,
 				1F4E5EC41F78E3BD00F1E08E /* Main.storyboard */,
@@ -231,6 +234,7 @@
 				1F4E5EC31F78E3BD00F1E08E /* ViewController.swift in Sources */,
 				1F4E5EC11F78E3BD00F1E08E /* AppDelegate.swift in Sources */,
 				1FAE85901F7A28AA00B09D3E /* CSHTTPTool.swift in Sources */,
+				1FB518E01F7DE2060021A3A4 /* DemoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

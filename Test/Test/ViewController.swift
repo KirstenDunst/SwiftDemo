@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     }
     
     @objc func kip(btn:UIButton?){
-        navigationController?.pushViewController(LoginViewController(), animated: true);
+        navigationController?.pushViewController(DemoViewController(), animated: true);
     }
 
     override func didReceiveMemoryWarning() {
