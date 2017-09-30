@@ -15,7 +15,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.view.backgroundColor = UIColor.white;
-        
+        self.title = "自动布局"
         createViewFrame()
     }
     
@@ -24,9 +24,7 @@ class LoginViewController: UIViewController {
         scroll.delegate = self as? UIScrollViewDelegate
 //        scroll.frame = CGRect(x:0,y:0,width:self.view.frame.size.width,height:self.view.frame.size.height)
         self.view.addSubview(scroll)
-//        设置协议的文字距离最底端100像素
-//        CGSize.init(width: self.view.frame.size.width, height: agreeLabel.frame.origin.y+20+100)
-        scroll.contentSize = CGSize.init(width: self.view.frame.size.width, height:700)
+        scroll.isPagingEnabled = true
         scroll.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(0)
             make.left.equalToSuperview().offset(0)
@@ -36,7 +34,7 @@ class LoginViewController: UIViewController {
         
         let image = UIImage.init(named: "ic_logo")
         let iconImageView = UIImageView.init(image: image)
-        self.view.addSubview(iconImageView)
+        scroll.addSubview(iconImageView)
         iconImageView.snp.makeConstraints { (make) in
             make.centerX.equalTo(scroll)
             make.centerY.equalTo(scroll.snp.top).offset(167)
@@ -107,6 +105,10 @@ class LoginViewController: UIViewController {
             make.height.equalTo(20)
             make.width.equalTo(300)
         }
+        
+//        设置协议的文字距离最底端100像素
+//        CGSize.init(width: self.view.frame.size.width, height: agreeLabel.frame.origin.y+20+100)
+        scroll.contentSize = CGSize.init(width: self.view.frame.size.width, height:700)
         
         
     }
