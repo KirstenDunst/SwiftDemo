@@ -110,14 +110,14 @@ class LoginViewController: UIViewController {
 //        CGSize.init(width: self.view.frame.size.width, height: agreeLabel.frame.origin.y+20+100)
         scroll.contentSize = CGSize.init(width: self.view.frame.size.width, height:700)
         
-        
+        scroll.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(close)))
     }
     
     @objc func btnClick(sender:UIButton?) {
             print("提交登陆")
         }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    @objc func close() {
         self.view.endEditing(true)
     }
     
