@@ -152,7 +152,7 @@ class LoginViewController: UIViewController {
             var frame = self.bgView.frame
 //            减去的64是导航栏的高度，减去的40是键盘上面的联想词的占有高度
             frame.origin.y = height!-64-40
-            self.bgView.frame = frame
+//            self.bgView.frame = frame
             self.scroll.contentOffset = CGPoint.init(x: 0, y: height!-64-40)
         }
     }
@@ -223,7 +223,9 @@ class LoginViewController: UIViewController {
         }
     
     @objc func close() {
-        self.scroll.contentOffset = CGPoint.init(x: 0, y: 0 )
+//        偏移量复位
+        self.scroll.contentOffset = CGPoint.init(x: 0, y: 0)
+//        键盘响应取消
         self.view.endEditing(true)
     }
     
