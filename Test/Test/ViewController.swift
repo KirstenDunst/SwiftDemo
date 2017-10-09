@@ -15,29 +15,37 @@ class ViewController: UIViewController {
         self.title = "测试"
         // Do any additional setup after loading the view, typically from a nib.
         self.view.backgroundColor = UIColor.white;
-        let button = UIButton(frame:CGRect(x:10, y:150, width:100, height:30))
-        button.setTitle("测试demo", for: UIControlState.normal)
-        button.setTitleColor(UIColor.lightGray, for: UIControlState.normal)
-        button.addTarget(self, action: #selector(kip(btn:)), for:
-            .touchUpInside)
-        self.view.addSubview(button)
+        let arr = NSArray.init(objects: "测试demo","登录界面","多线程","数据库处理")
         
-        let loginBtn = UIButton.init(frame: CGRect(x:10,y:250,width:100,height:30))
-        loginBtn.setTitle("登录页面", for: .normal)
-        loginBtn.setTitleColor(UIColor.red, for: .normal)
-        loginBtn.addTarget(self, action: #selector(login(btn:)), for: .touchUpInside)
-        self.view.addSubview(loginBtn)
+        
+        for index in 0...arr.count-1{
+            let button = UIButton(frame:CGRect(x:10, y:100+100*index, width:100, height:30))
+            button.setTitle(arr[index] as? String, for: UIControlState.normal)
+            button.setTitleColor(UIColor.lightGray, for: UIControlState.normal)
+            button.tag = index + 1000
+            button.addTarget(self, action: #selector(kip(btn:)), for:
+                .touchUpInside)
+            self.view.addSubview(button)
+        }
         
     }
     
     @objc func kip(btn:UIButton?){
-        navigationController?.pushViewController(DemoViewController(), animated: true)
+        switch (btn?.tag)!-1000 {
+        case 0:
+            navigationController?.pushViewController(DemoViewController(), animated: true)
+        case 1:
+             navigationController?.pushViewController(LoginViewController(), animated: true)
+        case 2:
+            navigationController?.pushViewController(ThreadViewController(), animated: true)
+        case 3:
+         navigationController?.pushViewController(DataBaseViewController(), animated: true)
+        default:
+            return
+        }
+        
     }
     
-    @objc func login(btn:UIButton){
-        navigationController?.pushViewController(LoginViewController(), animated: true)
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

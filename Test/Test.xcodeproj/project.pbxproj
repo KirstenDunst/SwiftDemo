@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F0CE44A1F8B7A4600F0C735 /* ThreadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0CE4491F8B7A4600F0C735 /* ThreadViewController.swift */; };
+		1F0CE44C1F8B7B4700F0C735 /* DataBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0CE44B1F8B7B4700F0C735 /* DataBaseViewController.swift */; };
 		1F4E5EC11F78E3BD00F1E08E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4E5EC01F78E3BD00F1E08E /* AppDelegate.swift */; };
 		1F4E5EC31F78E3BD00F1E08E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4E5EC21F78E3BD00F1E08E /* ViewController.swift */; };
 		1F4E5EC61F78E3BD00F1E08E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F4E5EC41F78E3BD00F1E08E /* Main.storyboard */; };
@@ -20,6 +22,8 @@
 
 /* Begin PBXFileReference section */
 		016820007FF48D93DAEC674D /* Pods-Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test.release.xcconfig"; path = "Pods/Target Support Files/Pods-Test/Pods-Test.release.xcconfig"; sourceTree = "<group>"; };
+		1F0CE4491F8B7A4600F0C735 /* ThreadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadViewController.swift; sourceTree = "<group>"; };
+		1F0CE44B1F8B7B4700F0C735 /* DataBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseViewController.swift; sourceTree = "<group>"; };
 		1F4E5EBD1F78E3BC00F1E08E /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F4E5EC01F78E3BD00F1E08E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F4E5EC21F78E3BD00F1E08E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +85,8 @@
 				1FB518DF1F7DE2060021A3A4 /* DemoViewController.swift */,
 				1F4E5ED21F78E4EB00F1E08E /* LoginViewController.swift */,
 				1FAE858F1F7A28AA00B09D3E /* CSHTTPTool.swift */,
+				1F0CE4491F8B7A4600F0C735 /* ThreadViewController.swift */,
+				1F0CE44B1F8B7B4700F0C735 /* DataBaseViewController.swift */,
 				1F4E5EC41F78E3BD00F1E08E /* Main.storyboard */,
 				1F4E5EC71F78E3BE00F1E08E /* Assets.xcassets */,
 				1F4E5EC91F78E3BE00F1E08E /* LaunchScreen.storyboard */,
@@ -232,6 +238,8 @@
 			files = (
 				1F4E5ED31F78E4EB00F1E08E /* LoginViewController.swift in Sources */,
 				1F4E5EC31F78E3BD00F1E08E /* ViewController.swift in Sources */,
+				1F0CE44C1F8B7B4700F0C735 /* DataBaseViewController.swift in Sources */,
+				1F0CE44A1F8B7A4600F0C735 /* ThreadViewController.swift in Sources */,
 				1F4E5EC11F78E3BD00F1E08E /* AppDelegate.swift in Sources */,
 				1FAE85901F7A28AA00B09D3E /* CSHTTPTool.swift in Sources */,
 				1FB518E01F7DE2060021A3A4 /* DemoViewController.swift in Sources */,
