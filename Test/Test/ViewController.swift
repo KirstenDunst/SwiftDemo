@@ -17,11 +17,11 @@ class ViewController: UIViewController {
         self.view.backgroundColor = UIColor.white;
         let arr = NSArray.init(objects: "测试demo","登录界面","多线程","数据库处理")
         
-        
         for index in 0...arr.count-1{
             let button = UIButton(frame:CGRect(x:10, y:100+100*index, width:100, height:30))
             button.setTitle(arr[index] as? String, for: UIControlState.normal)
-            button.setTitleColor(UIColor.lightGray, for: UIControlState.normal)
+            button.setBackgroundImage(creatImageWithColor(color: .lightGray), for: .normal)
+            button.setTitleColor(UIColor.red, for: UIControlState.normal)
             button.tag = index + 1000
             button.addTarget(self, action: #selector(kip(btn:)), for:
                 .touchUpInside)
@@ -44,6 +44,18 @@ class ViewController: UIViewController {
             return
         }
         
+    }
+    
+//    将颜色转为image对象
+    func creatImageWithColor(color:UIColor)->UIImage{
+        let rect = CGRect(x:0.0, y:0.0, width:1.0, height:1.0)
+        UIGraphicsBeginImageContext(rect.size)
+        let context = UIGraphicsGetCurrentContext()
+        context!.setFillColor(color.cgColor)
+        context!.fill(rect)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image!
     }
     
     override func didReceiveMemoryWarning() {
