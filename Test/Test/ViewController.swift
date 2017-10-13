@@ -35,11 +35,13 @@ class ViewController: UIViewController {
         case 0:
             navigationController?.pushViewController(DemoViewController(), animated: true)
         case 1:
-             navigationController?.pushViewController(LoginViewController(), animated: true)
+            navigationController?.pushViewController(LoginViewController(), animated: true)
         case 2:
-            navigationController?.pushViewController(ThreadViewController(), animated: true)
+            let threadVC = ThreadViewController()
+            threadVC.indexA = 1
+            navigationController?.pushViewController(threadVC, animated: true)
         case 3:
-         navigationController?.pushViewController(DataBaseViewController(), animated: true)
+            navigationController?.pushViewController(DataBaseViewController(), animated: true)
         default:
             return
         }
