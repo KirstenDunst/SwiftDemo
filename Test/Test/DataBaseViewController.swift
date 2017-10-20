@@ -24,7 +24,7 @@ class DataBaseViewController: UIViewController {
     }
 
     func createDataTool() {
-        let arr = NSArray.init(objects: "创建表","增加数据","删除数据","修改数据","查询数据","增加字段")
+        let arr = NSArray.init(objects: "创建表","增加数据","删除数据","修改数据","查询数据","增加字段","删除整个表")
         for index in 0..<arr.count {
             let button = UIButton.init(type: .system)
             button.frame = CGRect(x:10,y:74+60*index,width:100,height:50)
@@ -70,6 +70,11 @@ class DataBaseViewController: UIViewController {
 //                增加字段
                 addTypeData()
             }
+        case 6:
+            do{
+//                删除表格
+                dropTable()
+            }
         default:
             break
         }
@@ -77,7 +82,7 @@ class DataBaseViewController: UIViewController {
     
 //    创建表
     func createTable() {
-        let isSuccess = sqlManage.createTableWithContent(tableName: "CeShi", content: NSDictionary.init(objects: ["name","age"], forKeys: ["text" as NSCopying,"integer" as NSCopying]))
+        let isSuccess = sqlManage.CSXCreateTableWithContent(tableName: "CeShi", content: NSDictionary.init(objects: ["text","integer"], forKeys: ["name" as NSCopying,"age" as NSCopying]))
         print("创建表的结果：")
         print(isSuccess)
     }
@@ -85,33 +90,45 @@ class DataBaseViewController: UIViewController {
     
 //    增加数据
     func addTableData() {
-        sqlManage
+        for index in 0..<10 {
+            sqlManage.CSXInsertDataToTable(tableName: "CeShi", dicFields: NSDictionary.init(objects: ["小明"+String(index) as String,index+10], forKeys: ["name" as NSCopying,"age" as NSCopying]))
+        }
     }
     
     
 //    删除数据
     func deleteTableData() {
-        
+        sqlManage.CSXDeleteFromTable(tableName: "CeShi", FieldKey: "name", FieldValue: "小明")
     }
     
     
 //    修改数据
     func updateTableData() {
-        
+        let isSuccess = sqlManage.CSXUpdateToData(tableName: "CeShi", dicFields: NSDictionary.init(objects: ["小红"], forKeys: ["name" as NSCopying]), ConditionsKey: "age", ConditionsValue: 15)
+        print("修改数据结果：")
+        print(isSuccess)
     }
     
     
 //    查询数据
     func queryTableData() {
-        
+        let arr = sqlManage.CSXSelectFromTable(tableName: "CeShi", arFieldsKey: ["name"])
+        print(arr)
     }
     
     
 //    增加字段
     func addTypeData() {
+        sqlManage.CSXChangeTableWay1(tableName: "CeShi", addField: "Cars", addFieldType: "text")
         
     }
     
+    
+//     删除整个表格
+    func dropTable() {
+        sqlManage.CSXDropTable(tableName: "CeShi")
+        
+    }
     
     
     

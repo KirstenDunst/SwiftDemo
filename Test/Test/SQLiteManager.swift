@@ -28,7 +28,7 @@ class SQLiteManager: NSObject {
     /// - Parameters:
     ///   - tableName: 表名称
     ///   - content: 表字段:表属性   样式的字典
-   func createTableWithContent(tableName:String,content:NSDictionary) -> Bool {
+   func CSXCreateTableWithContent(tableName:String,content:NSDictionary) -> Bool {
         let db = database()
         if db.open() {
             var sql = "CREATE TABLE IF NOT EXISTS " + tableName + "(id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,"
@@ -61,7 +61,7 @@ class SQLiteManager: NSObject {
     /// - Parameters:
     ///   - tableName: 表名字
     ///   - dicFields: key为表字段，value为对应的字段值
-    func HQBInsertDataToTable(tableName:String,dicFields:NSDictionary){
+    func CSXInsertDataToTable(tableName:String,dicFields:NSDictionary){
         let db = database()
         if db.open() {
             let arFieldsKeys:[String] = dicFields.allKeys as! [String]
@@ -84,7 +84,6 @@ class SQLiteManager: NSObject {
             }catch{
                 print(db.lastErrorMessage())
             }
-            
         }
     }
 
@@ -96,9 +95,9 @@ class SQLiteManager: NSObject {
     ///   - tableName: 表名称
     ///   - dicFields: key为表字段，value为要修改的值
     ///   - ConditionsKey: 过滤筛选的字段
-    ///   - ConditionsValue: 过滤筛选字段对应的值
+    ///   - ConditionsValue: 过滤筛选字段对应的值（这里暂定为整型）
     /// - Returns: 操作结果 true为成功，false为失败
-    func HQBModifyToData(tableName:String , dicFields:NSDictionary ,ConditionsKey:String ,ConditionsValue :Int)->(Bool){
+    func CSXUpdateToData(tableName:String , dicFields:NSDictionary ,ConditionsKey:String ,ConditionsValue :Int)->(Bool){
         var result:Bool = false
         let arFieldsKey : [String] = dicFields.allKeys as! [String]
         var arFieldsValues:[Any] = dicFields.allValues
@@ -110,7 +109,6 @@ class SQLiteManager: NSObject {
             }else {
                 sqlUpdate = sqlUpdate + arFieldsKey[i] + " = ?"
             }
-            
         }
         sqlUpdate = sqlUpdate + " WHERE " + ConditionsKey + " = ?"
         let db = database()
@@ -134,7 +132,7 @@ class SQLiteManager: NSObject {
     ///   - tableName: 表名称
     ///   - arFieldsKey: 要查询获取的表字段
     /// - Returns: 返回相应数据
-    func HQBSelectFromTable(tableName:String,arFieldsKey:NSArray)->([NSMutableDictionary]){
+    func CSXSelectFromTable(tableName:String,arFieldsKey:NSArray)->([NSMutableDictionary]){
         let db = database()
         let dicFieldsValue :NSMutableDictionary = [:]
         var arFieldsValue = [NSMutableDictionary]()
@@ -151,7 +149,6 @@ class SQLiteManager: NSObject {
             }catch{
                 print(db.lastErrorMessage())
             }
-            
         }
         return arFieldsValue
     }
@@ -165,11 +162,10 @@ class SQLiteManager: NSObject {
     ///   - tableName: 表名称
     ///   - FieldKey: 过滤的表字段
     ///   - FieldValue: 过滤表字段对应的值
-    func HQBDeleteFromTable(tableName:String,FieldKey:String,FieldValue:Any) {
+    func CSXDeleteFromTable(tableName:String,FieldKey:String,FieldValue:Any) {
         let db = database()        
         if db.open() {
             let  sql = "DELETE FROM '" + tableName + "' WHERE " + FieldKey + " = ?"
-            
             do{
                 try db.executeUpdate(sql, values: [FieldValue])
                 print("删除成功")
@@ -181,7 +177,7 @@ class SQLiteManager: NSObject {
     
     
 //    删除整个表格
-    func HQBDropTable(tableName:String) {
+    func CSXDropTable(tableName:String) {
         let db = database()
         if db.open() {
             let  sql = "DROP TABLE " + tableName
@@ -210,7 +206,7 @@ class SQLiteManager: NSObject {
 //    ///   - tableName:表名称
 //    ///   - newField: 新增表字段
 //    ///   - dicFieldsAndType: 新表的全部字段 和字段对应的属性
-//    func HQBChangTable(tableName:String,newField:String, arFields:NSArray, arFieldsType:NSArray){
+//    func CSXChangTable(tableName:String,newField:String, arFields:NSArray, arFieldsType:NSArray){
 //        let db = database()
 //        if db.open() {
 //            if !db.columnExists(newField, inTableWithName: tableName) {
@@ -221,9 +217,9 @@ class SQLiteManager: NSObject {
 //                    //创建表
 //                    createTableWithContent(tableName: tableName, content: <#T##NSDictionary#>)
 //                    //导入数据数据
-//                    HQBImportData(oldTableName: "old_Table", newTableName: tableName)
+//                    CSXImportData(oldTableName: "old_Table", newTableName: tableName)
 //                    //删除旧表
-//                    HQBDropTable(tableName: "old_Table")
+//                    CSXDropTable(tableName: "old_Table")
 //                }catch{
 //                    print(db.lastErrorMessage())
 //                }
@@ -236,7 +232,7 @@ class SQLiteManager: NSObject {
 //    /// - Parameters:
 //    ///   - oldTableName: 临时表名
 //    ///   - newTableName: 原表明（增加字段的表明）
-//    func  HQBImportData(oldTableName:String,newTableName:String)  {
+//    func  CSXImportData(oldTableName:String,newTableName:String)  {
 //        let  db = database()
 //        if db.open() {
 //            let sql = "INSERT INTO " + newTableName + " SELECT  id,usedName, date, age, phone, ''  FROM " + oldTableName
@@ -253,10 +249,10 @@ class SQLiteManager: NSObject {
     /// 新增加表字段
     ///
     /// - Parameter tableName: 表名
-    func HQBChangeTableWay1(tableName:String , addField:String,addFieldType:String)  {
+    func CSXChangeTableWay1(tableName:String , addField:String,addFieldType:String)  {
         let db = database()
         if db.open() {
-            let sql  = "ALTER TABLE " + tableName + " ADD " + addField + addFieldType
+            let sql  = "ALTER TABLE " + tableName + " ADD " + addField + " " + addFieldType
             do{
                 try db.executeUpdate(sql, values: nil)
             }catch{
