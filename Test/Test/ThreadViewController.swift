@@ -36,7 +36,7 @@ class ThreadViewController: UIViewController {
             threadBtn.frame = CGRect(x:10,y:150+index*60,width:200,height:50)
             threadBtn.tag = index+100
             threadBtn.addTarget(self, action: #selector(threadTarch(sender:)), for: .touchUpInside)
-            threadBtn.setBackgroundImage(imageWithColor(color: UIColor.init(red: 56/255.0, green: 127/255.0, blue: 230/255.0, alpha: 1)), for: .normal)
+            threadBtn.setBackgroundImage(ImageClass.imageWithColor(color: UIColor.init(red: 56/255.0, green: 127/255.0, blue: 230/255.0, alpha: 1)), for: .normal)
             threadBtn.setTitleColor(UIColor.red, for: .normal)
             threadBtn.setTitle(arr[index] as? String, for: .normal)
             self.view.addSubview(threadBtn)
@@ -381,16 +381,4 @@ class ThreadViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
-//    绘制颜色转换成图片的格式的方法
-    func imageWithColor(color:UIColor) -> UIImage {
-        let  rect =  CGRect(x:0.0,y:0.0,width:1.0,height:1.0)
-        UIGraphicsBeginImageContext(rect.size)
-        let context = UIGraphicsGetCurrentContext()
-        context?.setFillColor(color.cgColor)
-        context?.fill(rect)
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return image!
-    }
 }

@@ -15,10 +15,25 @@
 		1F4E5EC81F78E3BE00F1E08E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F4E5EC71F78E3BE00F1E08E /* Assets.xcassets */; };
 		1F4E5ECB1F78E3BE00F1E08E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F4E5EC91F78E3BE00F1E08E /* LaunchScreen.storyboard */; };
 		1F4E5ED31F78E4EB00F1E08E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4E5ED21F78E4EB00F1E08E /* LoginViewController.swift */; };
+		1F69CBE11F989DCB00DC9564 /* SQLiteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F69CBE01F989DCB00DC9564 /* SQLiteManager.swift */; };
+		1F69CBE31F98CA7200DC9564 /* ImageClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F69CBE21F98CA7200DC9564 /* ImageClass.swift */; };
 		1FAE85901F7A28AA00B09D3E /* CSHTTPTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAE858F1F7A28AA00B09D3E /* CSHTTPTool.swift */; };
 		1FB518E01F7DE2060021A3A4 /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB518DF1F7DE2060021A3A4 /* DemoViewController.swift */; };
 		6ADD54CDE3DB3C491CE6342A /* Pods_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F80E265588C3818EC30288D0 /* Pods_Test.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1F69CBDD1F9894CE00DC9564 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		016820007FF48D93DAEC674D /* Pods-Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test.release.xcconfig"; path = "Pods/Target Support Files/Pods-Test/Pods-Test.release.xcconfig"; sourceTree = "<group>"; };
@@ -32,6 +47,8 @@
 		1F4E5ECA1F78E3BE00F1E08E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F4E5ECC1F78E3BE00F1E08E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F4E5ED21F78E4EB00F1E08E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1F69CBE01F989DCB00DC9564 /* SQLiteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteManager.swift; sourceTree = "<group>"; };
+		1F69CBE21F98CA7200DC9564 /* ImageClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClass.swift; sourceTree = "<group>"; };
 		1FAE858F1F7A28AA00B09D3E /* CSHTTPTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSHTTPTool.swift; sourceTree = "<group>"; };
 		1FB518DF1F7DE2060021A3A4 /* DemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
 		574ABE440DFD9B74B9498AC7 /* Pods-Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Test/Pods-Test.debug.xcconfig"; sourceTree = "<group>"; };
@@ -86,7 +103,9 @@
 				1F4E5ED21F78E4EB00F1E08E /* LoginViewController.swift */,
 				1FAE858F1F7A28AA00B09D3E /* CSHTTPTool.swift */,
 				1F0CE4491F8B7A4600F0C735 /* ThreadViewController.swift */,
+				1F69CBE21F98CA7200DC9564 /* ImageClass.swift */,
 				1F0CE44B1F8B7B4700F0C735 /* DataBaseViewController.swift */,
+				1F69CBE01F989DCB00DC9564 /* SQLiteManager.swift */,
 				1F4E5EC41F78E3BD00F1E08E /* Main.storyboard */,
 				1F4E5EC71F78E3BE00F1E08E /* Assets.xcassets */,
 				1F4E5EC91F78E3BE00F1E08E /* LaunchScreen.storyboard */,
@@ -116,6 +135,7 @@
 				1F4E5EBB1F78E3BC00F1E08E /* Resources */,
 				2965E567F157A601077575D0 /* [CP] Embed Pods Frameworks */,
 				D018594A3974491B5839C331 /* [CP] Copy Pods Resources */,
+				1F69CBDD1F9894CE00DC9564 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -183,12 +203,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Test/Pods-Test-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
@@ -239,7 +261,9 @@
 			files = (
 				1F4E5ED31F78E4EB00F1E08E /* LoginViewController.swift in Sources */,
 				1F4E5EC31F78E3BD00F1E08E /* ViewController.swift in Sources */,
+				1F69CBE31F98CA7200DC9564 /* ImageClass.swift in Sources */,
 				1F0CE44C1F8B7B4700F0C735 /* DataBaseViewController.swift in Sources */,
+				1F69CBE11F989DCB00DC9564 /* SQLiteManager.swift in Sources */,
 				1F0CE44A1F8B7A4600F0C735 /* ThreadViewController.swift in Sources */,
 				1F4E5EC11F78E3BD00F1E08E /* AppDelegate.swift in Sources */,
 				1FAE85901F7A28AA00B09D3E /* CSHTTPTool.swift in Sources */,
@@ -384,6 +408,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J34X25TCYP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
@@ -405,6 +433,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J34X25TCYP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
