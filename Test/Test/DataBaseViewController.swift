@@ -11,6 +11,8 @@ import UIKit
 class DataBaseViewController: UIViewController {
 
     var sqlManage = SQLiteManager()
+//    增加数据的递进字段
+    var adx = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,14 +93,15 @@ class DataBaseViewController: UIViewController {
 //    增加数据
     func addTableData() {
         for index in 0..<10 {
-            sqlManage.CSXInsertDataToTable(tableName: "CeShi", dicFields: NSDictionary.init(objects: ["小明"+String(index) as String,index+10], forKeys: ["name" as NSCopying,"age" as NSCopying]))
+            sqlManage.CSXInsertDataToTable(tableName: "CeShi", dicFields: NSDictionary.init(objects: ["小明"+String(index) as String,index+adx], forKeys: ["name" as NSCopying,"age" as NSCopying]))
         }
+        adx = adx + 10
     }
     
     
 //    删除数据
     func deleteTableData() {
-        sqlManage.CSXDeleteFromTable(tableName: "CeShi", FieldKey: "name", FieldValue: "小明")
+        sqlManage.CSXDeleteFromTable(tableName: "CeShi", FieldKey: "name", FieldValue: "小明0")
     }
     
     
@@ -112,8 +115,11 @@ class DataBaseViewController: UIViewController {
     
 //    查询数据
     func queryTableData() {
-        let arr = sqlManage.CSXSelectFromTable(tableName: "CeShi", arFieldsKey: ["name"])
-        print(arr)
+        let arr = sqlManage.CSXSelectFromTable(tableName: "CeShi", arFieldsDic: NSDictionary.init(objects: ["小明7"], forKeys: ["name" as NSCopying]))
+        for index in 0..<arr.count {
+            let dic = arr[index]
+            print(dic["name"] as! String)
+        }
     }
     
     

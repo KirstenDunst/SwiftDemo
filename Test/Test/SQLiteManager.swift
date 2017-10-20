@@ -130,20 +130,35 @@ class SQLiteManager: NSObject {
     ///
     /// - Parameters:
     ///   - tableName: 表名称
-    ///   - arFieldsKey: 要查询获取的表字段
+    ///   - arFieldsKey: 要查询获取的表字段，key表示clume，value表示约束的值
     /// - Returns: 返回相应数据
-    func CSXSelectFromTable(tableName:String,arFieldsKey:NSArray)->([NSMutableDictionary]){
+    func CSXSelectFromTable(tableName:String,arFieldsDic:NSDictionary)->([NSMutableDictionary]){
         let db = database()
-        let dicFieldsValue :NSMutableDictionary = [:]
         var arFieldsValue = [NSMutableDictionary]()
-        let sql = "SELECT * FROM " + tableName
+        var sql = "SELECT * FROM " + tableName
+        let arFieldsKey:[String] = arFieldsDic.allKeys as! [String]
+        let arFieldsType:[String] = arFieldsDic.allValues as! [String]
+   
+        for index in 0..<arFieldsKey.count {
+            if index == 0{
+                sql = sql + " WHERE " + arFieldsKey[index] + " = '" + arFieldsType[index] + "'"
+            }else{
+                if index == arFieldsKey.count-1{
+                    sql = sql + " AND " + arFieldsKey[index] + " = '" + arFieldsType[index] + "';"
+                }else{
+                    sql = sql + " AND " + arFieldsKey[index] + " = '" + arFieldsType[index] + "'"
+                }
+            }
+        }
+        
         if db.open() {
             do{
+                print(sql)
                 let rs = try db.executeQuery(sql, values: nil)
                 while rs.next() {
-                    for i in 0..<arFieldsKey.count {
-                        dicFieldsValue.setObject(rs.string(forColumn: arFieldsKey[i] as! String), forKey: arFieldsKey[i] as! NSCopying)
-                    }
+                    let dicFieldsValue :NSMutableDictionary = [:]
+                    dicFieldsValue.setObject(rs.string(forColumn:"age") as Any, forKey: arFieldsKey[0] as NSCopying)
+                    
                     arFieldsValue.append(dicFieldsValue)
                 }
             }catch{
@@ -152,6 +167,7 @@ class SQLiteManager: NSObject {
         }
         return arFieldsValue
     }
+    
     
     
     
