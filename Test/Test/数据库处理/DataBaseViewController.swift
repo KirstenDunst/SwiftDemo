@@ -16,7 +16,7 @@ class DataBaseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Realm数据库处理"
+        self.title = "FMDB数据库处理"
         self.view.backgroundColor = UIColor.white
         // Do any additional setup after loading the view.
         
@@ -37,6 +37,16 @@ class DataBaseViewController: UIViewController {
             button.addTarget(self, action: #selector(btnClick(sender:)), for: .touchUpInside)
             self.view.addSubview(button)
         }
+        
+//        realm处理数据库
+        let realmBtn = UIButton.init(type: .system)
+        realmBtn.frame = CGRect(x:self.view.frame.size.width-110,y:74+60,width:100,height:50)
+        realmBtn.setTitle("realm处理", for: .normal)
+        realmBtn.setTitleColor(UIColor.red, for: .normal)
+        realmBtn.setBackgroundImage(ImageClass.imageWithColor(color: UIColor.lightGray), for: .normal)
+        realmBtn.addTarget(self, action: #selector(realmBtn(sender:)), for: .touchUpInside)
+        self.view.addSubview(realmBtn)
+        
     }
     
     
@@ -81,6 +91,14 @@ class DataBaseViewController: UIViewController {
             break
         }
     }
+    
+    
+//    realm处理数据库文件
+    @objc func realmBtn(sender:UIButton){
+        navigationController?.pushViewController(RealmDealViewController(), animated: true)
+    }
+    
+    
     
 //    创建表
     func createTable() {

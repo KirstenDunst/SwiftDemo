@@ -7,18 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F0CE44A1F8B7A4600F0C735 /* ThreadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0CE4491F8B7A4600F0C735 /* ThreadViewController.swift */; };
-		1F0CE44C1F8B7B4700F0C735 /* DataBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0CE44B1F8B7B4700F0C735 /* DataBaseViewController.swift */; };
 		1F4E5EC11F78E3BD00F1E08E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4E5EC01F78E3BD00F1E08E /* AppDelegate.swift */; };
 		1F4E5EC31F78E3BD00F1E08E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4E5EC21F78E3BD00F1E08E /* ViewController.swift */; };
 		1F4E5EC61F78E3BD00F1E08E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F4E5EC41F78E3BD00F1E08E /* Main.storyboard */; };
 		1F4E5EC81F78E3BE00F1E08E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F4E5EC71F78E3BE00F1E08E /* Assets.xcassets */; };
 		1F4E5ECB1F78E3BE00F1E08E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F4E5EC91F78E3BE00F1E08E /* LaunchScreen.storyboard */; };
-		1F4E5ED31F78E4EB00F1E08E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4E5ED21F78E4EB00F1E08E /* LoginViewController.swift */; };
-		1F69CBE11F989DCB00DC9564 /* SQLiteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F69CBE01F989DCB00DC9564 /* SQLiteManager.swift */; };
 		1F69CBE31F98CA7200DC9564 /* ImageClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F69CBE21F98CA7200DC9564 /* ImageClass.swift */; };
-		1FAE85901F7A28AA00B09D3E /* CSHTTPTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAE858F1F7A28AA00B09D3E /* CSHTTPTool.swift */; };
-		1FB518E01F7DE2060021A3A4 /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB518DF1F7DE2060021A3A4 /* DemoViewController.swift */; };
+		1FE4F81E1F9D95E5002412E7 /* CSHTTPTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE4F8141F9D95E4002412E7 /* CSHTTPTool.swift */; };
+		1FE4F81F1F9D95E5002412E7 /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE4F8151F9D95E4002412E7 /* DemoViewController.swift */; };
+		1FE4F8201F9D95E5002412E7 /* ThreadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE4F8171F9D95E4002412E7 /* ThreadViewController.swift */; };
+		1FE4F8211F9D95E5002412E7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE4F8191F9D95E4002412E7 /* LoginViewController.swift */; };
+		1FE4F8221F9D95E5002412E7 /* DataBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE4F81B1F9D95E4002412E7 /* DataBaseViewController.swift */; };
+		1FE4F8231F9D95E5002412E7 /* RealmDealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE4F81C1F9D95E4002412E7 /* RealmDealViewController.swift */; };
+		1FE4F8241F9D95E5002412E7 /* SQLiteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE4F81D1F9D95E4002412E7 /* SQLiteManager.swift */; };
 		6ADD54CDE3DB3C491CE6342A /* Pods_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F80E265588C3818EC30288D0 /* Pods_Test.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,8 +38,6 @@
 
 /* Begin PBXFileReference section */
 		016820007FF48D93DAEC674D /* Pods-Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test.release.xcconfig"; path = "Pods/Target Support Files/Pods-Test/Pods-Test.release.xcconfig"; sourceTree = "<group>"; };
-		1F0CE4491F8B7A4600F0C735 /* ThreadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadViewController.swift; sourceTree = "<group>"; };
-		1F0CE44B1F8B7B4700F0C735 /* DataBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseViewController.swift; sourceTree = "<group>"; };
 		1F4E5EBD1F78E3BC00F1E08E /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F4E5EC01F78E3BD00F1E08E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F4E5EC21F78E3BD00F1E08E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,11 +45,14 @@
 		1F4E5EC71F78E3BE00F1E08E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F4E5ECA1F78E3BE00F1E08E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F4E5ECC1F78E3BE00F1E08E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1F4E5ED21F78E4EB00F1E08E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		1F69CBE01F989DCB00DC9564 /* SQLiteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteManager.swift; sourceTree = "<group>"; };
 		1F69CBE21F98CA7200DC9564 /* ImageClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClass.swift; sourceTree = "<group>"; };
-		1FAE858F1F7A28AA00B09D3E /* CSHTTPTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSHTTPTool.swift; sourceTree = "<group>"; };
-		1FB518DF1F7DE2060021A3A4 /* DemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
+		1FE4F8141F9D95E4002412E7 /* CSHTTPTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSHTTPTool.swift; sourceTree = "<group>"; };
+		1FE4F8151F9D95E4002412E7 /* DemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
+		1FE4F8171F9D95E4002412E7 /* ThreadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadViewController.swift; sourceTree = "<group>"; };
+		1FE4F8191F9D95E4002412E7 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1FE4F81B1F9D95E4002412E7 /* DataBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBaseViewController.swift; sourceTree = "<group>"; };
+		1FE4F81C1F9D95E4002412E7 /* RealmDealViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmDealViewController.swift; sourceTree = "<group>"; };
+		1FE4F81D1F9D95E4002412E7 /* SQLiteManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteManager.swift; sourceTree = "<group>"; };
 		574ABE440DFD9B74B9498AC7 /* Pods-Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Test/Pods-Test.debug.xcconfig"; sourceTree = "<group>"; };
 		F80E265588C3818EC30288D0 /* Pods_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -99,19 +101,52 @@
 			children = (
 				1F4E5EC01F78E3BD00F1E08E /* AppDelegate.swift */,
 				1F4E5EC21F78E3BD00F1E08E /* ViewController.swift */,
-				1FB518DF1F7DE2060021A3A4 /* DemoViewController.swift */,
-				1F4E5ED21F78E4EB00F1E08E /* LoginViewController.swift */,
-				1FAE858F1F7A28AA00B09D3E /* CSHTTPTool.swift */,
-				1F0CE4491F8B7A4600F0C735 /* ThreadViewController.swift */,
 				1F69CBE21F98CA7200DC9564 /* ImageClass.swift */,
-				1F0CE44B1F8B7B4700F0C735 /* DataBaseViewController.swift */,
-				1F69CBE01F989DCB00DC9564 /* SQLiteManager.swift */,
+				1FE4F8181F9D95E4002412E7 /* 登陆界面ui布局约束 */,
+				1FE4F8131F9D95E4002412E7 /* 第三方约束以及请求 */,
+				1FE4F8161F9D95E4002412E7 /* 多线程GCD */,
+				1FE4F81A1F9D95E4002412E7 /* 数据库处理 */,
 				1F4E5EC41F78E3BD00F1E08E /* Main.storyboard */,
 				1F4E5EC71F78E3BE00F1E08E /* Assets.xcassets */,
 				1F4E5EC91F78E3BE00F1E08E /* LaunchScreen.storyboard */,
 				1F4E5ECC1F78E3BE00F1E08E /* Info.plist */,
 			);
 			path = Test;
+			sourceTree = "<group>";
+		};
+		1FE4F8131F9D95E4002412E7 /* 第三方约束以及请求 */ = {
+			isa = PBXGroup;
+			children = (
+				1FE4F8141F9D95E4002412E7 /* CSHTTPTool.swift */,
+				1FE4F8151F9D95E4002412E7 /* DemoViewController.swift */,
+			);
+			path = "第三方约束以及请求";
+			sourceTree = "<group>";
+		};
+		1FE4F8161F9D95E4002412E7 /* 多线程GCD */ = {
+			isa = PBXGroup;
+			children = (
+				1FE4F8171F9D95E4002412E7 /* ThreadViewController.swift */,
+			);
+			path = "多线程GCD";
+			sourceTree = "<group>";
+		};
+		1FE4F8181F9D95E4002412E7 /* 登陆界面ui布局约束 */ = {
+			isa = PBXGroup;
+			children = (
+				1FE4F8191F9D95E4002412E7 /* LoginViewController.swift */,
+			);
+			path = "登陆界面ui布局约束";
+			sourceTree = "<group>";
+		};
+		1FE4F81A1F9D95E4002412E7 /* 数据库处理 */ = {
+			isa = PBXGroup;
+			children = (
+				1FE4F81B1F9D95E4002412E7 /* DataBaseViewController.swift */,
+				1FE4F81C1F9D95E4002412E7 /* RealmDealViewController.swift */,
+				1FE4F81D1F9D95E4002412E7 /* SQLiteManager.swift */,
+			);
+			path = "数据库处理";
 			sourceTree = "<group>";
 		};
 		296B1B9318757AD744339D60 /* Frameworks */ = {
@@ -259,15 +294,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F4E5ED31F78E4EB00F1E08E /* LoginViewController.swift in Sources */,
+				1FE4F8211F9D95E5002412E7 /* LoginViewController.swift in Sources */,
 				1F4E5EC31F78E3BD00F1E08E /* ViewController.swift in Sources */,
 				1F69CBE31F98CA7200DC9564 /* ImageClass.swift in Sources */,
-				1F0CE44C1F8B7B4700F0C735 /* DataBaseViewController.swift in Sources */,
-				1F69CBE11F989DCB00DC9564 /* SQLiteManager.swift in Sources */,
-				1F0CE44A1F8B7A4600F0C735 /* ThreadViewController.swift in Sources */,
+				1FE4F8221F9D95E5002412E7 /* DataBaseViewController.swift in Sources */,
+				1FE4F8201F9D95E5002412E7 /* ThreadViewController.swift in Sources */,
 				1F4E5EC11F78E3BD00F1E08E /* AppDelegate.swift in Sources */,
-				1FAE85901F7A28AA00B09D3E /* CSHTTPTool.swift in Sources */,
-				1FB518E01F7DE2060021A3A4 /* DemoViewController.swift in Sources */,
+				1FE4F81E1F9D95E5002412E7 /* CSHTTPTool.swift in Sources */,
+				1FE4F8241F9D95E5002412E7 /* SQLiteManager.swift in Sources */,
+				1FE4F81F1F9D95E5002412E7 /* DemoViewController.swift in Sources */,
+				1FE4F8231F9D95E5002412E7 /* RealmDealViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
