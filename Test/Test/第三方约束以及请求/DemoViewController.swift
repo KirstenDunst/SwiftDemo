@@ -124,16 +124,14 @@ class DemoViewController: UIViewController {
         
         //        使用系统自带的请求封装的方法进行网络请求处理
         CSHTTPTool.share.getWithPath(path: "http://appapi.zongs365.com/api/home/machine/9001000015/goodsdetial", paras: nil, success: { (data) in
-            //            print("成功","\n", data)
+             //            print("成功","\n", data)
         }) { (error) in
-            //            print("失败", error)
+             //            print("失败", error)
         }
+      
         
         
-        
-        
-        
-        
+
         
         
         
