@@ -42,7 +42,7 @@ class Person: Object {
     //名字
     @objc dynamic var name = ""
     //年龄
-    @objc dynamic var cost = 0
+    @objc dynamic var age = 0
     //    ... // 其余的属性声明
     let dogs = List<Dog>()
 }
@@ -57,7 +57,7 @@ class Person: Object {
 class Dog: Object {
     @objc dynamic var name = ""
     @objc dynamic var age = 0
-    
+
     // Realm 并不会存储这个属性，因为这个属性只定义了 getter
     // 定义“owners”，和 Person.dogs 建立反向关系
     let owners = LinkingObjects(fromType: Person.self, property: "dogs")
@@ -90,11 +90,15 @@ class PersonOne: Object {
  重写 Object.indexedProperties() 方法可以为数据模型中需要添加索引的属性建立索引：
  */
 class Book: Object {
+    @objc dynamic var id = 0
     @objc dynamic var price = 0
     @objc dynamic var title = ""
     
     override static func indexedProperties() -> [String] {
         return ["title"]
+    }
+    override static func primaryKey() -> String? {
+        return "id"
     }
 }
 
