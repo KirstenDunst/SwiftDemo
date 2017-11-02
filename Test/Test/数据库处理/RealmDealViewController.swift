@@ -622,6 +622,7 @@ class RealmDealViewController: UIViewController,UITableViewDelegate,UITableViewD
     
     
     
+    
    
     
     override func didReceiveMemoryWarning() {

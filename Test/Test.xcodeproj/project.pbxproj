@@ -20,10 +20,6 @@
 		1FE4F8221F9D95E5002412E7 /* DataBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE4F81B1F9D95E4002412E7 /* DataBaseViewController.swift */; };
 		1FE4F8231F9D95E5002412E7 /* RealmDealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE4F81C1F9D95E4002412E7 /* RealmDealViewController.swift */; };
 		1FE4F8241F9D95E5002412E7 /* SQLiteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE4F81D1F9D95E4002412E7 /* SQLiteManager.swift */; };
-		1FE4F8311F9DCE18002412E7 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FE4F82F1F9DCE14002412E7 /* RealmSwift.framework */; };
-		1FE4F8321F9DCE18002412E7 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1FE4F82F1F9DCE14002412E7 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1FE4F8331F9DCE18002412E7 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FE4F8301F9DCE18002412E7 /* Realm.framework */; };
-		1FE4F8341F9DCE18002412E7 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1FE4F8301F9DCE18002412E7 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1FE4F8381F9DE6F6002412E7 /* TableNameAndKinds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE4F8371F9DE6F6002412E7 /* TableNameAndKinds.swift */; };
 		6ADD54CDE3DB3C491CE6342A /* Pods_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F80E265588C3818EC30288D0 /* Pods_Test.framework */; };
 /* End PBXBuildFile section */
@@ -35,8 +31,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1FE4F8341F9DCE18002412E7 /* Realm.framework in Embed Frameworks */,
-				1FE4F8321F9DCE18002412E7 /* RealmSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -60,8 +54,6 @@
 		1FE4F81B1F9D95E4002412E7 /* DataBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBaseViewController.swift; sourceTree = "<group>"; };
 		1FE4F81C1F9D95E4002412E7 /* RealmDealViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmDealViewController.swift; sourceTree = "<group>"; };
 		1FE4F81D1F9D95E4002412E7 /* SQLiteManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteManager.swift; sourceTree = "<group>"; };
-		1FE4F82F1F9DCE14002412E7 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
-		1FE4F8301F9DCE18002412E7 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		1FE4F8371F9DE6F6002412E7 /* TableNameAndKinds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableNameAndKinds.swift; sourceTree = "<group>"; };
 		574ABE440DFD9B74B9498AC7 /* Pods-Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Test/Pods-Test.debug.xcconfig"; sourceTree = "<group>"; };
 		F80E265588C3818EC30288D0 /* Pods_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,8 +64,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FE4F8331F9DCE18002412E7 /* Realm.framework in Frameworks */,
-				1FE4F8311F9DCE18002412E7 /* RealmSwift.framework in Frameworks */,
 				6ADD54CDE3DB3C491CE6342A /* Pods_Test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,8 +83,6 @@
 		1F4E5EB41F78E3BC00F1E08E = {
 			isa = PBXGroup;
 			children = (
-				1FE4F8301F9DCE18002412E7 /* Realm.framework */,
-				1FE4F82F1F9DCE14002412E7 /* RealmSwift.framework */,
 				1F4E5EBF1F78E3BC00F1E08E /* Test */,
 				1F4E5EBE1F78E3BC00F1E08E /* Products */,
 				1D2549342C96484C38E975E7 /* Pods */,
@@ -255,6 +243,8 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -262,6 +252,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,6 +458,7 @@
 					"$(PROJECT_DIR)/Test/数据库处理",
 				);
 				INFOPLIST_FILE = Test/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
 				PODS_ROOT = "$(inherited)";
@@ -492,6 +485,7 @@
 					"$(PROJECT_DIR)/Test/数据库处理",
 				);
 				INFOPLIST_FILE = Test/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
 				PODS_ROOT = "$(inherited)";
