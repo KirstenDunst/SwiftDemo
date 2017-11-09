@@ -130,14 +130,15 @@ class AnimationViewController: UIViewController {
         
 //        获取测试的路线
         let path = funcationOfBezi(number: AnimationViewController.interestRate)
-        
-        let layer = CAShapeLayer()
-        self.view.layer .addSublayer(layer)
+    
+        self.view.layer.addSublayer(AnimationViewController.beziLayer)
         AnimationViewController.beziLayer.path = path.cgPath
         AnimationViewController.beziLayer.fillColor = UIColor.clear.cgColor
         AnimationViewController.beziLayer.strokeColor = UIColor.red.cgColor
-        layer.addSublayer(AnimationViewController.beziLayer)
-        animation1(layer: layer)
+        
+        animation1(layer: AnimationViewController.beziLayer)
+//        animation2(layer: AnimationViewController.beziLayer)
+//        animation3(layer: AnimationViewController.beziLayer)
   
         AnimationViewController.interestRate = AnimationViewController.interestRate+1
         if AnimationViewController.interestRate>4 {
