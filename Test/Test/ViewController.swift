@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         self.title = "测试"
         // Do any additional setup after loading the view, typically from a nib.
         self.view.backgroundColor = UIColor.white;
-        let arr = NSArray.init(objects: "测试demo","登录界面","多线程","数据库处理")
+        let arr = NSArray.init(objects: "测试demo","登录界面","多线程","数据库处理","动画处理")
         
         for index in 0...arr.count-1{
             let button = UIButton(frame:CGRect(x:10, y:100+100*index, width:100, height:30))
@@ -42,6 +42,8 @@ class ViewController: UIViewController {
             navigationController?.pushViewController(threadVC, animated: true)
         case 3:
             navigationController?.pushViewController(DataBaseViewController(), animated: true)
+        case 4:
+            navigationController?.pushViewController(AnimationViewController(), animated: true)
         default:
             return
         }
