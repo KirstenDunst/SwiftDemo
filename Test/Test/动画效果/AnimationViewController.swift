@@ -16,6 +16,8 @@ class AnimationViewController: UIViewController {
     static var interestRate : Int = 0
     static var beziLayer = CAShapeLayer()
     
+    var imageView = UIImageView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "动画效果处理"
@@ -25,6 +27,20 @@ class AnimationViewController: UIViewController {
     }
 
     func createViewForUI() {
+        
+        imageView.frame = CGRect(x:150,y:250,width:200,height:300)
+        var images = [UIImage]()
+        for index in 0..<81 {
+            images.append(UIImage.init(named: String.init(format: "drink_%.2d.jpg", index))!)
+        }
+        imageView.image = UIImage.init(named: "drink_00.jpg")
+        imageView.animationImages = images
+        imageView.animationDuration = 6
+        imageView.animationRepeatCount = 1
+        self.view.addSubview(imageView)
+        
+        
+        
         let titleArr = NSArray.init(objects: "粒子动画","贝塞尔曲线动画","UIView动画","帧动画")
         for index in 0..<titleArr.count {
             let btn = UIButton.init(type: UIButtonType.system)
@@ -36,6 +52,8 @@ class AnimationViewController: UIViewController {
             btn.addTarget(self, action: #selector(animation(sender:)), for: UIControlEvents.touchUpInside)
             self.view.addSubview(btn)
         }
+        
+        
     }
     
     @objc func animation(sender: UIButton){
@@ -59,6 +77,7 @@ class AnimationViewController: UIViewController {
             do{
                 print("帧动画")
                 FrameAnimation(sender: sender)
+                imageView.startAnimating()
             }
         default:
             break
