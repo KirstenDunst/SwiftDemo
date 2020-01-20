@@ -293,13 +293,13 @@ class RealmDealViewController: UIViewController,UITableViewDelegate,UITableViewD
         
         // 通过 id = 1 更新该书籍
         try! realm.write {
-            realm.add(cheeseBook, update: true)
+            realm.add(cheeseBook, update: Realm.UpdatePolicy.all)
         }
         
         /****** 方式2 ***/
         // 假设带有主键值 `1` 的“书籍”对象已经存在
         try! realm.write {
-            realm.create(Book.self, value: ["id": 1, "price": 22], update: true)
+            realm.create(Book.self, value: ["id": 1, "price": 22], update: Realm.UpdatePolicy.all)
             // 这本书的`title`属性不会被改变
         }
         
@@ -312,7 +312,7 @@ class RealmDealViewController: UIViewController,UITableViewDelegate,UITableViewD
             // 更新第一个
             persons.first?.setValue(true, forKeyPath: "isFirst")
             // 将每个人的 planet 属性设置为“地球”
-            persons.setValue("地球", forKeyPath: "planet")
+            persons.setValue("地球", forKey: "planet")
         }
         
         

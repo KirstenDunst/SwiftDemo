@@ -106,6 +106,16 @@
 		1FE4F8241F9D95E5002412E7 /* SQLiteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE4F81D1F9D95E4002412E7 /* SQLiteManager.swift */; };
 		1FE4F8381F9DE6F6002412E7 /* TableNameAndKinds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE4F8371F9DE6F6002412E7 /* TableNameAndKinds.swift */; };
 		6ADD54CDE3DB3C491CE6342A /* Pods_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F80E265588C3818EC30288D0 /* Pods_Test.framework */; };
+		DB481D8A23D59F9100CC5D89 /* RXNormalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB481D8923D59F9100CC5D89 /* RXNormalViewController.swift */; };
+		DB481D9C23D5A10600CC5D89 /* RXBaseKnowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB481D8E23D5A10500CC5D89 /* RXBaseKnowViewController.swift */; };
+		DB481D9D23D5A10600CC5D89 /* RXObservableOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB481D8F23D5A10500CC5D89 /* RXObservableOneViewController.swift */; };
+		DB481D9E23D5A10600CC5D89 /* RXThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB481D9023D5A10500CC5D89 /* RXThreeViewController.swift */; };
+		DB481D9F23D5A10600CC5D89 /* RXObservableCreateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB481D9123D5A10500CC5D89 /* RXObservableCreateVC.swift */; };
+		DB481DA023D5A10600CC5D89 /* RXObservableSubscribeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB481D9223D5A10500CC5D89 /* RXObservableSubscribeViewController.swift */; };
+		DB481DA123D5A10600CC5D89 /* RXObservableTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB481D9323D5A10500CC5D89 /* RXObservableTwoViewController.swift */; };
+		DB481DA323D5A10600CC5D89 /* content.json in Resources */ = {isa = PBXBuildFile; fileRef = DB481D9523D5A10500CC5D89 /* content.json */; };
+		DB481DA723D5A10600CC5D89 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB481D9923D5A10500CC5D89 /* ListModel.swift */; };
+		DB481DA923D5A14400CC5D89 /* 3788243-617bee7b94fd1613.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DB481DA823D5A14300CC5D89 /* 3788243-617bee7b94fd1613.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -224,6 +234,16 @@
 		1FE4F81D1F9D95E4002412E7 /* SQLiteManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteManager.swift; sourceTree = "<group>"; };
 		1FE4F8371F9DE6F6002412E7 /* TableNameAndKinds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableNameAndKinds.swift; sourceTree = "<group>"; };
 		574ABE440DFD9B74B9498AC7 /* Pods-Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Test/Pods-Test.debug.xcconfig"; sourceTree = "<group>"; };
+		DB481D8923D59F9100CC5D89 /* RXNormalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RXNormalViewController.swift; sourceTree = "<group>"; };
+		DB481D8E23D5A10500CC5D89 /* RXBaseKnowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXBaseKnowViewController.swift; sourceTree = "<group>"; };
+		DB481D8F23D5A10500CC5D89 /* RXObservableOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXObservableOneViewController.swift; sourceTree = "<group>"; };
+		DB481D9023D5A10500CC5D89 /* RXThreeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXThreeViewController.swift; sourceTree = "<group>"; };
+		DB481D9123D5A10500CC5D89 /* RXObservableCreateVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXObservableCreateVC.swift; sourceTree = "<group>"; };
+		DB481D9223D5A10500CC5D89 /* RXObservableSubscribeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXObservableSubscribeViewController.swift; sourceTree = "<group>"; };
+		DB481D9323D5A10500CC5D89 /* RXObservableTwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXObservableTwoViewController.swift; sourceTree = "<group>"; };
+		DB481D9523D5A10500CC5D89 /* content.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = content.json; sourceTree = "<group>"; };
+		DB481D9923D5A10500CC5D89 /* ListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
+		DB481DA823D5A14300CC5D89 /* 3788243-617bee7b94fd1613.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "3788243-617bee7b94fd1613.jpg"; sourceTree = "<group>"; };
 		F80E265588C3818EC30288D0 /* Pods_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -272,6 +292,7 @@
 				1F4E5EC01F78E3BD00F1E08E /* AppDelegate.swift */,
 				1F4E5EC21F78E3BD00F1E08E /* ViewController.swift */,
 				1F69CBE21F98CA7200DC9564 /* ImageClass.swift */,
+				DB481D8823D59EF500CC5D89 /* RXSwiftDemo */,
 				1FE4F8181F9D95E4002412E7 /* 登陆界面ui布局约束 */,
 				1FE4F8131F9D95E4002412E7 /* 第三方约束以及请求 */,
 				1FE4F8161F9D95E4002412E7 /* 多线程GCD */,
@@ -428,6 +449,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DB481D8823D59EF500CC5D89 /* RXSwiftDemo */ = {
+			isa = PBXGroup;
+			children = (
+				DB481D8923D59F9100CC5D89 /* RXNormalViewController.swift */,
+				DB481D9523D5A10500CC5D89 /* content.json */,
+				DB481D9923D5A10500CC5D89 /* ListModel.swift */,
+				DB481DA823D5A14300CC5D89 /* 3788243-617bee7b94fd1613.jpg */,
+				DB481D8D23D5A10500CC5D89 /* seconContent */,
+			);
+			path = RXSwiftDemo;
+			sourceTree = "<group>";
+		};
+		DB481D8D23D5A10500CC5D89 /* seconContent */ = {
+			isa = PBXGroup;
+			children = (
+				DB481D8E23D5A10500CC5D89 /* RXBaseKnowViewController.swift */,
+				DB481D9123D5A10500CC5D89 /* RXObservableCreateVC.swift */,
+				DB481D9223D5A10500CC5D89 /* RXObservableSubscribeViewController.swift */,
+				DB481D8F23D5A10500CC5D89 /* RXObservableOneViewController.swift */,
+				DB481D9323D5A10500CC5D89 /* RXObservableTwoViewController.swift */,
+				DB481D9023D5A10500CC5D89 /* RXThreeViewController.swift */,
+			);
+			path = seconContent;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -440,7 +486,6 @@
 				1F4E5EBA1F78E3BC00F1E08E /* Frameworks */,
 				1F4E5EBB1F78E3BC00F1E08E /* Resources */,
 				2965E567F157A601077575D0 /* [CP] Embed Pods Frameworks */,
-				D018594A3974491B5839C331 /* [CP] Copy Pods Resources */,
 				1F69CBDD1F9894CE00DC9564 /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -460,7 +505,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
 				LastUpgradeCheck = 0900;
-				ORGANIZATIONNAME = "宗盛商业";
+				ORGANIZATIONNAME = "曹世鑫";
 				TargetAttributes = {
 					1F4E5EBC1F78E3BC00F1E08E = {
 						CreatedOnToolsVersion = 9.0;
@@ -499,6 +544,7 @@
 				1F94849D1FB4400400110FED /* drink_28.jpg in Resources */,
 				1F9484C61FB4400400110FED /* drink_69.jpg in Resources */,
 				1F94849A1FB4400400110FED /* drink_25.jpg in Resources */,
+				DB481DA323D5A10600CC5D89 /* content.json in Resources */,
 				1F94848B1FB4400400110FED /* drink_10.jpg in Resources */,
 				1F9484C41FB4400400110FED /* drink_67.jpg in Resources */,
 				1F9484881FB4400400110FED /* drink_07.jpg in Resources */,
@@ -525,6 +571,7 @@
 				1F94848C1FB4400400110FED /* drink_11.jpg in Resources */,
 				1F9484D11FB4400400110FED /* drink_80.jpg in Resources */,
 				1F9484821FB4400400110FED /* drink_01.jpg in Resources */,
+				DB481DA923D5A14400CC5D89 /* 3788243-617bee7b94fd1613.jpg in Resources */,
 				1F9484961FB4400400110FED /* drink_21.jpg in Resources */,
 				1F9484811FB4400400110FED /* drink_00.jpg in Resources */,
 				1F94848A1FB4400400110FED /* drink_09.jpg in Resources */,
@@ -589,26 +636,36 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Test/Pods-Test-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Test/Pods-Test-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
+				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Test/Pods-Test-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Test/Pods-Test-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		642EA03425F99609B6AD4658 /* [CP] Check Pods Manifest.lock */ = {
@@ -629,21 +686,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D018594A3974491B5839C331 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Test/Pods-Test-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -651,9 +693,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB481DA723D5A10600CC5D89 /* ListModel.swift in Sources */,
 				1FD212321FB1999C008F99BF /* UIImage+Extension.swift in Sources */,
 				1FE4F8211F9D95E5002412E7 /* LoginViewController.swift in Sources */,
 				1F4E5EC31F78E3BD00F1E08E /* ViewController.swift in Sources */,
+				DB481D9E23D5A10600CC5D89 /* RXThreeViewController.swift in Sources */,
+				DB481D8A23D59F9100CC5D89 /* RXNormalViewController.swift in Sources */,
 				1F69CBE31F98CA7200DC9564 /* ImageClass.swift in Sources */,
 				1FD2122E1FB185AD008F99BF /* AnimationViewController.swift in Sources */,
 				1FE4F8221F9D95E5002412E7 /* DataBaseViewController.swift in Sources */,
@@ -661,7 +706,12 @@
 				1F4E5EC11F78E3BD00F1E08E /* AppDelegate.swift in Sources */,
 				1FE4F81E1F9D95E5002412E7 /* CSHTTPTool.swift in Sources */,
 				1FE4F8381F9DE6F6002412E7 /* TableNameAndKinds.swift in Sources */,
+				DB481DA123D5A10600CC5D89 /* RXObservableTwoViewController.swift in Sources */,
+				DB481D9C23D5A10600CC5D89 /* RXBaseKnowViewController.swift in Sources */,
+				DB481D9D23D5A10600CC5D89 /* RXObservableOneViewController.swift in Sources */,
+				DB481DA023D5A10600CC5D89 /* RXObservableSubscribeViewController.swift in Sources */,
 				1FE4F8241F9D95E5002412E7 /* SQLiteManager.swift in Sources */,
+				DB481D9F23D5A10600CC5D89 /* RXObservableCreateVC.swift in Sources */,
 				1FE4F81F1F9D95E5002412E7 /* DemoViewController.swift in Sources */,
 				1FE4F8231F9D95E5002412E7 /* RealmDealViewController.swift in Sources */,
 			);

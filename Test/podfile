@@ -1,7 +1,11 @@
-platform :ios, '11.1'
+platform :ios, 9.0
 use_frameworks!
 
 target 'Test' do
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'HandyJSON'
+  pod 'Toast-Swift'
   pod 'Kingfisher'
   pod 'Alamofire'
   pod 'SnapKit'
