@@ -116,6 +116,7 @@
 		DB481DA323D5A10600CC5D89 /* content.json in Resources */ = {isa = PBXBuildFile; fileRef = DB481D9523D5A10500CC5D89 /* content.json */; };
 		DB481DA723D5A10600CC5D89 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB481D9923D5A10500CC5D89 /* ListModel.swift */; };
 		DB481DA923D5A14400CC5D89 /* 3788243-617bee7b94fd1613.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DB481DA823D5A14300CC5D89 /* 3788243-617bee7b94fd1613.jpg */; };
+		DB481DAB23D5A80800CC5D89 /* RXTransDealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB481DAA23D5A80800CC5D89 /* RXTransDealViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -244,6 +245,7 @@
 		DB481D9523D5A10500CC5D89 /* content.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = content.json; sourceTree = "<group>"; };
 		DB481D9923D5A10500CC5D89 /* ListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
 		DB481DA823D5A14300CC5D89 /* 3788243-617bee7b94fd1613.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "3788243-617bee7b94fd1613.jpg"; sourceTree = "<group>"; };
+		DB481DAA23D5A80800CC5D89 /* RXTransDealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RXTransDealViewController.swift; sourceTree = "<group>"; };
 		F80E265588C3818EC30288D0 /* Pods_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -470,6 +472,7 @@
 				DB481D8F23D5A10500CC5D89 /* RXObservableOneViewController.swift */,
 				DB481D9323D5A10500CC5D89 /* RXObservableTwoViewController.swift */,
 				DB481D9023D5A10500CC5D89 /* RXThreeViewController.swift */,
+				DB481DAA23D5A80800CC5D89 /* RXTransDealViewController.swift */,
 			);
 			path = seconContent;
 			sourceTree = "<group>";
@@ -702,6 +705,7 @@
 				1F69CBE31F98CA7200DC9564 /* ImageClass.swift in Sources */,
 				1FD2122E1FB185AD008F99BF /* AnimationViewController.swift in Sources */,
 				1FE4F8221F9D95E5002412E7 /* DataBaseViewController.swift in Sources */,
+				DB481DAB23D5A80800CC5D89 /* RXTransDealViewController.swift in Sources */,
 				1FE4F8201F9D95E5002412E7 /* ThreadViewController.swift in Sources */,
 				1F4E5EC11F78E3BD00F1E08E /* AppDelegate.swift in Sources */,
 				1FE4F81E1F9D95E5002412E7 /* CSHTTPTool.swift in Sources */,

@@ -68,7 +68,7 @@ extension RXNormalViewController : UITableViewDelegate, UITableViewDataSource {
             let nameSpage = Bundle.main.infoDictionary!["CFBundleExecutable"]
             let childVcClass : AnyClass = NSClassFromString((nameSpage as! String) + "." + model.vcClassStr)!
             guard let childVcType = childVcClass as? UIViewController.Type else {
-                print("没有得到的控制器类型")
+                print("没有得到的控制器类型：", childVcClass)
                 return
             }
             let model = dataArr[indexPath.row] as! ListModel
